@@ -1,0 +1,253 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Italic;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{square\}}{\leveltext\leveltemplateid3\'01\uc0\u9642 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Abstract Data Types (ADTs) are theoretical concepts in computer science that define 
+\f1\b a data type by its behavior
+\f0\b0  (the operations you can perform and the rules for those operations), rather than by its implementation. In other words, an ADT specifies 
+\f2\i what
+\f0\i0  operations are allowed, not 
+\f2\i how
+\f0\i0  they are carried out in memory.\
+Here are some classic examples of ADTs:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Stack
+\f0\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Behavior:
+\f0\b0  Last-In-First-Out (LIFO)\
+\ls1\ilvl1
+\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Operations:
+\f0\b0 \
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\sa240\partightenfactor0
+\ls1\ilvl2
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 push(item)
+\f0\fs24  \'96 add an item to the top\
+\ls1\ilvl2
+\f3\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 pop()
+\f0\fs24  \'96 remove the top item\
+\ls1\ilvl2
+\f3\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 peek()
+\f0\fs24  / 
+\f3\fs26 top()
+\f0\fs24  \'96 view the top item without removing it\
+\ls1\ilvl2
+\f3\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 isEmpty()
+\f0\fs24  \'96 check if the stack is empty\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Example usage:
+\f0\b0  Undo functionality in text editors.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Queue
+\f0\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Behavior:
+\f0\b0  First-In-First-Out (FIFO)\
+\ls1\ilvl1
+\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Operations:
+\f0\b0 \
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\sa240\partightenfactor0
+\ls1\ilvl2
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 enqueue(item)
+\f0\fs24  \'96 add to the back\
+\ls1\ilvl2
+\f3\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 dequeue()
+\f0\fs24  \'96 remove from the front\
+\ls1\ilvl2
+\f3\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 front()
+\f0\fs24  / 
+\f3\fs26 peek()
+\f0\fs24  \'96 view the front item\
+\ls1\ilvl2
+\f3\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 isEmpty()
+\f0\fs24  \'96 check if the queue is empty\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Example usage:
+\f0\b0  Printer job scheduling.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Deque (Double-Ended Queue)
+\f0\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Behavior:
+\f0\b0  Can add/remove elements from both ends\
+\ls1\ilvl1
+\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Operations:
+\f0\b0 \
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\sa240\partightenfactor0
+\ls1\ilvl2
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 addFront(item)
+\f0\fs24 , 
+\f3\fs26 addRear(item)
+\f0\fs24 , 
+\f3\fs26 removeFront()
+\f0\fs24 , 
+\f3\fs26 removeRear()
+\f0\fs24 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Example usage:
+\f0\b0  Sliding window algorithms.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List (Sequence)
+\f0\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Behavior:
+\f0\b0  Ordered collection of elements\
+\ls1\ilvl1
+\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Operations:
+\f0\b0 \
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\sa240\partightenfactor0
+\ls1\ilvl2
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 insert(position, item)
+\f0\fs24 , 
+\f3\fs26 remove(position)
+\f0\fs24 , 
+\f3\fs26 get(position)
+\f0\fs24 , 
+\f3\fs26 size()
+\f0\fs24 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Example usage:
+\f0\b0  Dynamic arrays, linked lists.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Priority Queue
+\f0\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Behavior:
+\f0\b0  Each element has a priority; the highest priority is served first\
+\ls1\ilvl1
+\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Operations:
+\f0\b0 \
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\sa240\partightenfactor0
+\ls1\ilvl2
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 insert(item, priority)
+\f0\fs24 , 
+\f3\fs26 extractMax()
+\f0\fs24  / 
+\f3\fs26 extractMin()
+\f0\fs24 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Example usage:
+\f0\b0  Task scheduling, Dijkstra\'92s algorithm.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Set
+\f0\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Behavior:
+\f0\b0  Collection of distinct elements (no duplicates)\
+\ls1\ilvl1
+\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Operations:
+\f0\b0 \
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\sa240\partightenfactor0
+\ls1\ilvl2
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 add(item)
+\f0\fs24 , 
+\f3\fs26 remove(item)
+\f0\fs24 , 
+\f3\fs26 contains(item)
+\f0\fs24 , 
+\f3\fs26 union()
+\f0\fs24 , 
+\f3\fs26 intersection()
+\f0\fs24 , 
+\f3\fs26 difference()
+\f0\fs24 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Example usage:
+\f0\b0  Tracking unique elements, database queries.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Map (Dictionary)
+\f0\b0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Behavior:
+\f0\b0  Collection of key-value pairs, where each key is unique\
+\ls1\ilvl1
+\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Operations:
+\f0\b0 \
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\sa240\partightenfactor0
+\ls1\ilvl2
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9642 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 put(key, value)
+\f0\fs24 , 
+\f3\fs26 get(key)
+\f0\fs24 , 
+\f3\fs26 remove(key)
+\f0\fs24 , 
+\f3\fs26 containsKey(key)
+\f0\fs24 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Example usage:
+\f0\b0  Associative arrays, caching.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 ]\
+}
