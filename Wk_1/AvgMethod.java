@@ -9,10 +9,10 @@ public class AvgMethod {
     * Method "average" calculates the average of integers in an ArrayList
     * @param list - takes as input values from the list of integers
     * @return returns value in double format
-    * Returns 0.0 if the list is empty
+    * Returns 0.0 if the list is empty (to avoid division by 0)
     */
     public static double average(ArrayList<Integer> list) { 
-        double sum = 0; //initialize sum to 0
+        double sum = 0; //initialize sum of integers to 0
 
         for (int i = 0; i < list.size(); i++) { //for-loop to search entries in ArrayList
             sum += list.get(i); //add each entry to sum
@@ -25,5 +25,27 @@ public class AvgMethod {
         return sum/list.size(); //else return average of the entries
 
     }  
+
+    /**
+     * Method "averageLinked" calculates the average of integers in a LinkedList
+     * @param list - takes as input values from the list of integers
+     * @return returns value in double format
+     * Returns 0.0 if the list is empty (to avoid division by 0)
+     */
+    public static double averageLinked(LinkedList<Integer> list) {
+
+        double sum = 0; //initialize sum of integers to 0
+
+        for (int i = 0; i < list.size(); i++) { //for-loop to search entries in the LinkedList
+
+            sum += list.get(i); //add each entry to sum
+        }
+
+        if (list.size() == 0) { //return  0.0 if list is empty
+            return 0.0;
+        }
+
+        return sum / list.size(); //else return average of the entries
+    }
     
 }
