@@ -6,12 +6,23 @@ public class AvgMethod {
     }  
     
     /**
-    * Calculates the average of integers in an ArrayList
-    * Takes as input values from the list of integers, "list"
-    * Returns value in double format
+    * Method "average" calculates the average of integers in an ArrayList
+    * @param list - takes as input values from the list of integers
+    * @return returns value in double format
     * Returns 0.0 if the list is empty
     */
     public static double average(ArrayList<Integer> list) { 
+        double sum = 0; //initialize sum to 0
+
+        for (int i = 0; i < list.size(); i++) { //for-loop to search entries in ArrayList
+            sum += list.get(i); //add each entry to sum
+        }
+
+        if (list.size() == 0) { //return 0.0 if list is empty
+            return 0.0;
+        }
+
+        return sum/list.size(); //else return average of the entries
 
     }  
     
