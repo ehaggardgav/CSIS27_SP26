@@ -31,14 +31,15 @@ public class AvgMethod {
      * @param list - takes as input values from the list of integers
      * @return returns value in double format
      * Returns 0.0 if the list is empty (to avoid division by 0)
+     * For-each loop instead of for-loop leverages the structure of LinkedList, 
+     * keeping track of the current node, so no need to restart from the first node each time
      */
     public static double averageLinked(LinkedList<Integer> list) {
 
         double sum = 0; //initialize sum of integers to 0
 
-        for (int i = 0; i < list.size(); i++) { //for-loop to search entries in the LinkedList
-
-            sum += list.get(i); //add each entry to sum
+        for (int num : list) { //for-each loop to keep track of nodes
+            sum += num; //add entry at current node to sum
         }
 
         if (list.size() == 0) { //return  0.0 if list is empty
