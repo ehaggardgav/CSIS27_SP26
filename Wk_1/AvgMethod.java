@@ -6,7 +6,7 @@ public class AvgMethod {
     public static void main(String [] args) {
         ArrayList<Integer> arrayList = genRandList(5); //populate ArrayList with 5 random integers
 
-        LinkedList<Integer> linkedList = new LinkedList<>(genRandList(5)); //populate LinkedList with a different set of 5 random integers
+        LinkedList<Integer> linkedList = new LinkedList<>(genRandList(5)); //constructor that takes genRandList output to generate a new list
 
         System.out.println("ArrayList: " + arrayList);
         System.out.println("LinkedList: " + linkedList);
@@ -15,20 +15,26 @@ public class AvgMethod {
         System.out.println("Average of LinkedList: " + calculateAverageLoop(linkedList));
     }  
 
-    public static ArrayList<Integer> genRandList(int n) {
-        ArrayList<Integer> list = new ArrayList<>();
-        Random rand = new Random();
-        for (int i = 0; i < n; i++) {
-            list.add(rand.nextInt(100));
+    /**
+        Method "genRandList" generates an ArrayList containing random integers.
+        @param n The number of random integers to generate.
+        @return An ArrayList<Integer> containing n random integers between 0 and 99.
+    */
+    public static ArrayList<Integer> genRandList(int n) { //store random integers in empty ArrayList
+        ArrayList<Integer> list = new ArrayList<>(); 
+        Random rand = new Random();  //object to generate random numbers
+        for (int i = 0; i < n; i++) { //for-loop to repeat for n integers
+            int randomInt = rand.nextInt(100);
+            list.add(randomInt);
         }
         return list;
     }
     
     /**
         Method "average" calculates the average of integers in an ArrayList
+        Returns 0.0 if the list is empty (to avoid division by 0)
         @param list - takes as input values from the list of integers
         @return returns value in double format
-        Returns 0.0 if the list is empty (to avoid division by 0)
     */
     public static double average(ArrayList<Integer> list) { 
         if (list.isEmpty()) { //test if list is empty first
@@ -47,9 +53,9 @@ public class AvgMethod {
 
     /**
         Method "calculateAverageLoop" calculates the average of integers in a LinkedList
+        Returns 0.0 if the list is empty (to avoid division by 0)
         @param list - takes as input values from the list of integers
         @return returns value in double format
-        Returns 0.0 if the list is empty (to avoid division by 0)
         For-each loop instead of for-loop leverages the structure of LinkedList, 
         keeping track of the current node, so no need to restart from the first node each time
      */
