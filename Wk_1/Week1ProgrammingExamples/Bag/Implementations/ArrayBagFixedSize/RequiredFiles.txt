@@ -1,0 +1,17 @@
+BagInterface.java
+
+and one of the following pairings:
+
+ArrayBag1.java
+ArrayBagDemo1.java
+
+ArrayBag2.java
+ArrayBagDemo2.java
+
+ArrayBag.java
+ArrayBagDemo3.java
+
+ArrayBag.java
+ArrayBagDemo.java
+
+
