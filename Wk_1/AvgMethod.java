@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.random;
+import java.util.Random;
 
 public class AvgMethod {
     public static void main(String [] args) {
-        ArrayList<Integer> arrayList = generateRandomList(5); //populate ArrayList with 5 random integers
+        ArrayList<Integer> arrayList = genRandList(5); //populate ArrayList with 5 random integers
 
-        LinkedList<Integer> linkedList = new LinkedList<>(generateRandomList(5)); //populate LinkedList with a different set of 5 random integers
+        LinkedList<Integer> linkedList = new LinkedList<>(genRandList(5)); //populate LinkedList with a different set of 5 random integers
 
         System.out.println("ArrayList: " + arrayList);
         System.out.println("LinkedList: " + linkedList);
@@ -14,6 +14,15 @@ public class AvgMethod {
         System.out.println("Average of ArrayList: " + average(arrayList));
         System.out.println("Average of LinkedList: " + calculateAverageLoop(linkedList));
     }  
+
+    public static ArrayList<Integer> genRandList(int n) {
+        ArrayList<Integer> list = new ArrayList<>();
+        Random rand = new Random();
+        for (int i = 0; i < n; i++) {
+            list.add(rand.nextInt(100));
+        }
+        return list;
+    }
     
     /**
         Method "average" calculates the average of integers in an ArrayList
@@ -37,7 +46,7 @@ public class AvgMethod {
     }  
 
     /**
-        Method "averageLinked" calculates the average of integers in a LinkedList
+        Method "calculateAverageLoop" calculates the average of integers in a LinkedList
         @param list - takes as input values from the list of integers
         @return returns value in double format
         Returns 0.0 if the list is empty (to avoid division by 0)
@@ -55,11 +64,8 @@ public class AvgMethod {
             sum += num; //add entry at current node to sum
         }
 
-        if (list.size() == 0) { //return  0.0 if list is empty
-            return 0.0;
-        }
-
         return sum / list.size(); //return average of the entries
+
     }
     
 }
