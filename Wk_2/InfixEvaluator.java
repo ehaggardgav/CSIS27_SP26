@@ -8,6 +8,7 @@ public class InfixEvaluator {
         System.out.println("Enter an infix expression (e.g., 3 + 4 * (2 - 1)):");
         String expression = scanner.nextLine();
 
+        //try-catch method used here (to catch mismached parentheses, invalid characters and division by 0)
         try {
             int result = evaluateInfix(expression);
             System.out.println("Result: " + result);
@@ -101,12 +102,12 @@ public class InfixEvaluator {
         }
     }
 
-    //Boolean 'isOperator' checks if character is an operator
+    //Boolean 'isOperator' checks if character is one of the valid operators: +, -, *, /
     private static boolean isOperator(char c) {
         return c == '+' || c == '-' || c == '*' || c == '/';
     }
 
-    private static int precedence(char op) { //now return operator precedence
+    private static int precedence(char op) { //now return operator precedence (higher number shows higher precedence)
         switch (op) {
             case '+': case '-': return 1;
             case '*': case '/': return 2;
