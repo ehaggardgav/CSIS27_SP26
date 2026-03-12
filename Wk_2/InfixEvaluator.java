@@ -3,7 +3,6 @@ import java.util.Stack;
 
 public class InfixEvaluator {
 
-    // Main method to test evaluator with user input
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an infix expression (e.g., 3 + 4 * (2 - 1)):");
@@ -20,7 +19,7 @@ public class InfixEvaluator {
     }
 
     /**
-     * Evaluates a valid infix expression using two stacks: operands and operators
+     * Method 'evaluateInfix' evaluates valid infix expressions using two stacks: operands and operators
      * @param expr Infix expression string
      * @return evaluated integer result
      */
@@ -35,30 +34,28 @@ public class InfixEvaluator {
         for (int i = 0; i < expr.length(); i++) {
             char c = expr.charAt(i);
 
-            if (c == ' ') continue; // ignore spaces
+            if (c == ' ') continue; //ignore spaces
 
-            if (Character.isDigit(c)) {
-                // Handle multi-digit numbers
+            if (Character.isDigit(c)) { //to handle multi-digit numbers
                 int num = 0;
                 while (i < expr.length() && Character.isDigit(expr.charAt(i))) {
                     num = num * 10 + (expr.charAt(i) - '0');
                     i++;
                 }
                 operandStack.push(num);
-                i--; // adjust for extra increment in while
+                i--; 
             } else if (c == '(') {
-                operatorStack.push(c); // push '(' to operator stack
+                operatorStack.push(c); //push '(' to operator stack
             } else if (c == ')') {
-                // Pop operators until '('
-                while (!operatorStack.isEmpty() && operatorStack.peek() != '(') {
+                while (!operatorStack.isEmpty() && operatorStack.peek() != '(') { //while-loop to pop operators until '('
                     applyOperator(operandStack, operatorStack);
                 }
                 if (operatorStack.isEmpty()) {
                     throw new IllegalArgumentException("Mismatched parentheses");
                 }
-                operatorStack.pop(); // remove '('
+                operatorStack.pop(); //now remove '('
             } else if (isOperator(c)) {
-                // While top operator has higher or equal precedence, apply it
+                //while-loop to handle precedence
                 while (!operatorStack.isEmpty() && precedence(operatorStack.peek()) >= precedence(c)) {
                     applyOperator(operandStack, operatorStack);
                 }
@@ -68,7 +65,7 @@ public class InfixEvaluator {
             }
         }
 
-        // Apply remaining operators
+        //now remaining operators
         while (!operatorStack.isEmpty()) {
             if (operatorStack.peek() == '(' || operatorStack.peek() == ')') {
                 throw new IllegalArgumentException("Mismatched parentheses");
@@ -83,7 +80,7 @@ public class InfixEvaluator {
         return operandStack.pop();
     }
 
-    // Apply top operator to top two operands
+    //Helper 'applyOperator' applies top operator to top two operands
     private static void applyOperator(Stack<Integer> operands, Stack<Character> operators) {
         if (operands.size() < 2) {
             throw new IllegalArgumentException("Not enough operands for operation");
@@ -104,13 +101,12 @@ public class InfixEvaluator {
         }
     }
 
-    // Check if character is an operator
+    //Boolean 'isOperator' checks if character is an operator
     private static boolean isOperator(char c) {
         return c == '+' || c == '-' || c == '*' || c == '/';
     }
 
-    // Return operator precedence
-    private static int precedence(char op) {
+    private static int precedence(char op) { //now return operator precedence
         switch (op) {
             case '+': case '-': return 1;
             case '*': case '/': return 2;
