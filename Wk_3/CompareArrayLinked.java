@@ -12,6 +12,12 @@ public class CompareArrayLinked {
         int[] sizes = {1000, 10000, 100000}; //specify multiple input sizes for better resolution
         int trials = 3; 
 
+        //set up output format to line up
+        System.out.printf("%-12s %-20s %-20s %-20s %-20s%n", 
+                "Input Size", "ArrayList Stack", "LinkedList Stack", "ArrayList Queue", "LinkedList Queue");
+        System.out.println("------------------------------------------------------------------------------------");
+
+
         for (int n : sizes) {
             //use long  to keep track of bytes, and use lambdas to be able to reuse the same test method for each test case
             long arrStackMem = averageMemory(trials, () -> {  
