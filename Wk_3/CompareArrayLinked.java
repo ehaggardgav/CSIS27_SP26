@@ -39,10 +39,10 @@ public class CompareArrayLinked {
             });
 
             System.out.println("Input size: " + n);
-            System.out.println("ArrayList Stack avg memory: " + arrStackMem + " bytes");
-            System.out.println("LinkedList Stack avg memory: " + linkStackMem + " bytes");
-            System.out.println("ArrayList Queue avg memory: " + arrQueueMem + " bytes");
-            System.out.println("LinkedList Queue avg memory: " + linkQueueMem + " bytes");
+            System.out.printf("%-20s %12d bytes%n", "ArrayList Stack:", arrStackMem);
+            System.out.printf("%-20s %12d bytes%n", "LinkedList Stack:", linkStackMem);
+            System.out.printf("%-20s %12d bytes%n", "ArrayList Queue:", arrQueueMem);
+            System.out.printf("%-20s %12d bytes%n", "LinkedList Queue:", linkQueueMem);
             System.out.println("----------------------");
         }
     
