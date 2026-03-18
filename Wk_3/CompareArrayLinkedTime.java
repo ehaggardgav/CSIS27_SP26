@@ -18,7 +18,7 @@ public class CompareArrayLinkedTime {
             //measure average time (nanoseconds) for each data structure operation
             long arrStackTime = averageTime(trials, () -> {  
                 ArrayList<Integer> stack = new ArrayList<>();
-                for (int i = 0; i < n; i++) stack.add(i);            //push
+                for (int i = 0; i < n; i++) stack.add(i);                   //push
                 for (int i = 0; i < n; i++) stack.remove(stack.size() - 1); //pop
             });
 
@@ -30,7 +30,7 @@ public class CompareArrayLinkedTime {
 
             long arrQueueTime = averageTime(trials, () -> {
                 ArrayList<Integer> queue = new ArrayList<>();
-                for (int i = 0; i < n; i++) queue.add(i);          //enqueue
+                for (int i = 0; i < n; i++) queue.add(i);                 //enqueue
                 for (int i = 0; i < n; i++) queue.remove(0);       //dequeue
             });
 
@@ -75,9 +75,9 @@ public class CompareArrayLinkedTime {
      * @return Time taken (in nanoseconds)
      */
     public static long runTimeTest(Runnable test) {
-        long start = System.nanoTime(); // start timer
-        test.run();                     // run operations
-        long end = System.nanoTime();   // end timer
-        return end - start;             // return elapsed time
+        long start = System.nanoTime(); //start timer
+        test.run();                     //run operations
+        long end = System.nanoTime();   //end timer
+        return end - start;             //return elapsed time
     }
 }
