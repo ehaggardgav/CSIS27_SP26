@@ -12,11 +12,6 @@ public class CompareArrayLinkedTime {
         int[] sizes = {1000, 10000, 100000}; //multiple input sizes for better resolution
         int trials = 3; //number of trials to average time measurements
 
-        //set up table header for aligned output
-        System.out.printf("%-12s %-20s %-20s %-20s %-20s%n", 
-                "Input Size", "ArrayList Stack", "LinkedList Stack", "ArrayList Queue", "LinkedList Queue");
-        System.out.println("------------------------------------------------------------------------------------");
-
         //for-loop over each input size
         for (int n : sizes) {
 
