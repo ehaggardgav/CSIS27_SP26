@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 /**
  * This program compares the time complexity of array and linked list implementations
  * of stack and queue ADT's, using memory as the response variable, averaging over 
@@ -6,12 +9,12 @@
 
 public class CompareArrayLinked {   
     public static void main(String[] args){
-        int[] sizes = {1000, 10000, 100000};
+        int[] sizes = {1000, 10000, 100000}; //specify multiple input sizes for better resolution
         int trials = 3; 
 
         for (int n : sizes) {
-
-            long arrStackMem = averageMemory(trials, () -> {
+            //use long  to keep track of bytes, and use lambdas to be able to reuse the same test method for each test case
+            long arrStackMem = averageMemory(trials, () -> {  
                 ArrayList<Integer> stack = new ArrayList<>();
                 for (int i = 0; i < n; i++) stack.add(i);
                 for (int i = 0; i < n; i++) stack.remove(stack.size() - 1);
