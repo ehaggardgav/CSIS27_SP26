@@ -49,7 +49,7 @@ public class CompareArrayLinked {
     }
 
     /**
-     * Runs a memory test multiple times and returns the average memory used.
+     * Method 'averageMemeory' runs a memory test multiple times and returns the average memory used.
      *
      * @param trials Number of times to repeat the test
      * @param test A Runnable containing the operations to measure
