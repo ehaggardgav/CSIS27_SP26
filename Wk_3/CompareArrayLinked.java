@@ -64,5 +64,26 @@ public class CompareArrayLinked {
 
         return totalMemory / trials;
     }
+
+    /**
+     * Method 'runMemoryTest' measures memory before and after 
+     * running the test and returns the difference.
+     *
+     * @param test A Runnable containing the operations to measure
+     * @return Memory used (in bytes) during the test
+     */
+    public static long runMemoryTest(Runnable test) {
+        Runtime runtime = Runtime.getRuntime();
+
+        System.gc(); //suggest garbage collection to reduce leftover memory
+
+        long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
+
+        test.run();
+
+        long memoryAfter = runtime.totalMemory() - runtime.freeMemory();
+
+        return memoryAfter - memoryBefore;
+    }
     
 }
