@@ -47,5 +47,22 @@ public class CompareArrayLinked {
         }
     
     }
+
+    /**
+     * Runs a memory test multiple times and returns the average memory used.
+     *
+     * @param trials Number of times to repeat the test
+     * @param test A Runnable containing the operations to measure
+     * @return Average memory used (in bytes)
+     */
+    public static long averageMemory(int trials, Runnable test) {
+        long totalMemory = 0;
+
+        for (int i = 0; i < trials; i++) {
+            totalMemory += runMemoryTest(test);
+        }
+
+        return totalMemory / trials;
+    }
     
 }
