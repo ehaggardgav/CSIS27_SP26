@@ -57,7 +57,7 @@ public class CompareArrayLinkedTime {
     }
 
     /**
-     * Runs a time test multiple times and returns the average time.
+     * Method 'averageTime' runs a time test multiple times and returns the average time.
      *
      * @param trials Number of times to repeat the test
      * @param test A Runnable containing the operations to measure
@@ -74,7 +74,7 @@ public class CompareArrayLinkedTime {
     }
 
     /**
-     * Measures execution time of a single run of a block of code.
+     * Method 'runTimeTest' measures execution time of a single run of a block of code.
      *
      * @param test A Runnable containing the operations to measure
      * @return Time taken (in nanoseconds)
