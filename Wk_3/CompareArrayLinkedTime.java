@@ -45,6 +45,13 @@ public class CompareArrayLinkedTime {
                 for (int i = 0; i < n; i++) queue.removeFirst();   //dequeue
             });
 
+            //print formatted results 
+            System.out.println("Input size: " + n);
+            System.out.printf("%-20s %12d ns%n", "ArrayList Stack:", arrStackTime);
+            System.out.printf("%-20s %12d ns%n", "LinkedList Stack:", linkStackTime);
+            System.out.printf("%-20s %12d ns%n", "ArrayList Queue:", arrQueueTime);
+            System.out.printf("%-20s %12d ns%n", "LinkedList Queue:", linkQueueTime);
+            System.out.println("----------------------");
             
         }
     }
