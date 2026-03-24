@@ -1,0 +1,5 @@
+
+
+Version 1: LListRevised as described in Segments 18.8 and 18.9 of Chapter 18.
+Version 2: LinkedChainList extends LinkedChainBase, as described in Segments 18.10 and 18.11 of Chapter 18.
+
