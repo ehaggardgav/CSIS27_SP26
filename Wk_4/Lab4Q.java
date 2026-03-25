@@ -51,6 +51,22 @@ static class LinkedQueue<T> implements QueueInterface<T> {
         size++;
     }
 
+    @Override
+    public T dequeue() {
+        checkEmpty();
+
+        T value = head.data;
+        head = head.next;
+
+        if (head == null) {
+            tail = null;
+        }
+        
+        size--;
+        return value;
+    }
+
+    
     
     }
     
