@@ -66,7 +66,12 @@ static class LinkedQueue<T> implements QueueInterface<T> {
         return value;
     }
 
-    
+    @Override
+    public T peek() {
+        checkEmpty();
+        return head.data;
+    }
+
     
     }
     
