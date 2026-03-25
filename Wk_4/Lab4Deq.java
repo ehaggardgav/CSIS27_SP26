@@ -3,7 +3,7 @@ public class Lab4Deq {
     /**
      * An interface for a generic deque ADT.
      * Defines operations for adding and removing entries
-     * from both the front and the rear.
+     * from both the front and the end.
      */
     interface DequeInterface<T> {
         void addToHead(T data); //adds a new entry to the front of the deque.
@@ -151,11 +151,11 @@ public class Lab4Deq {
         d.addToTail(20);
         d.addToTail(25);
 
-        System.out.println(d.getHead()); // 5
-        System.out.println(d.getTail());  // 25
+        System.out.println(d.getHead()); 
+        System.out.println(d.getTail());  
 
-        System.out.println(d.removeHead()); // 5
-        System.out.println(d.removeTail());  // 25
+        System.out.println(d.removeHead()); 
+        System.out.println(d.removeTail());  
 
         System.out.println(d.size());
     }
