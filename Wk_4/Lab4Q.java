@@ -9,18 +9,18 @@ public class Lab4Q {
         int size();
     }
 
-    static class Node<T> {
-    T data;
-    Node<T> next;
-
-    Node(T data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
-static class linkedQueue<T> implements QueueInterface<T> {
+static class LinkedQueue<T> implements QueueInterface<T> {
     
+    private static class Node<T> {
+        private T data;
+        private Node<T> next;
+
+        private Node(T data) {
+            this.data = data;
+            this.next = null;
+        }    
+    }    
+
     private Node<T> head;
     private Node<T> tail;
     private int size;
