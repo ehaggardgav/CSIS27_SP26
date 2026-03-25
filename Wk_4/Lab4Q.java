@@ -72,7 +72,20 @@ static class LinkedQueue<T> implements QueueInterface<T> {
         return head.data;
     }
 
-    
+    @Override
+    public boolean isEmpty() {
+        return size == 0;
     }
+
+    @Override
+    public int size() {
+        return size;
+    }
+    
+}
+
+public static void main(String[] args) {
+    
+}
     
 }
