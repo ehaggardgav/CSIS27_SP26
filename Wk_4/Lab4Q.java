@@ -1,5 +1,15 @@
 public class Lab4Q {
-static class Node<T> {
+
+
+    interface QueueInterface<T> {
+        void enqueue (T data);
+        T dequeue ();
+        T peek ();
+        boolean isEmpty();
+        int size();
+    }
+    
+    static class Node<T> {
     T data;
     Node<T> next;
 
@@ -21,7 +31,7 @@ static class Queue<T> {
 public void enqueue (T data) {
     Node<T> newNode = new Node<>(data);
 
-    if (rear ==null) {
+    if (rear == null) {
         front = rear = newNode;
         return;
     }
