@@ -8,23 +8,27 @@ public class Lab4Q {
         boolean isEmpty();
         int size();
     }
-    
+
     static class Node<T> {
     T data;
     Node<T> next;
 
     Node(T data) {
-        this.data = data
+        this.data = data;
         this.next = null;
     }
 }
 
-static class Queue<T> {
-    Node<T> front;
-    Node<T> rear;
+static class linkedQueue<T> implements QueueInterface<T> {
+    
+    private Node<T> head;
+    private Node<T> tail;
+    private int size;
 
-    public Queue() {
-        front = rear = null;
+    public LinkedQueue() {
+        head = null;
+        tail = null;
+        size = 0;
     }
 }
 
