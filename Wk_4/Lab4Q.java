@@ -30,18 +30,28 @@ static class LinkedQueue<T> implements QueueInterface<T> {
         tail = null;
         size = 0;
     }
-}
 
-public void enqueue (T data) {
-    Node<T> newNode = new Node<>(data);
-
-    if (rear == null) {
-        front = rear = newNode;
-        return;
+    private void checkEmpty() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty");
+        }
     }
 
-    rear.next = newNode;
-    rear = newNode;
-}
+    @Override
+    public void enqueue (T data) {
+        Node<T> newNode = new Node<>(data);
+
+        if (isEmpty()) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        
+        size++;
+    }
+
+    
+    }
     
 }
