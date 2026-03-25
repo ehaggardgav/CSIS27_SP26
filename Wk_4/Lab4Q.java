@@ -85,7 +85,16 @@ static class LinkedQueue<T> implements QueueInterface<T> {
 }
 
 public static void main(String[] args) {
-    
+    QueueInterface<Integer> q = new LinkedQueue<>();
+
+    q.enqueue(5);
+    q.enqueue(10);
+    q.enqueue(15);
+    q.enqueue(20);
+
+    System.out.println(q.dequeue());
+    System.out.println(q.peek());
+    System.out.println(q.size());
 }
     
 }
