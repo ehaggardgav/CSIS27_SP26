@@ -7,6 +7,8 @@ public static void main (String[] args) {
 
     System.out.print("Enter word 1: ");
     String word1 = input.nextLine();
+
+    System.out.print("Enter word 2: ");
     String word2 = input.nextLine();
     
     boolean result = isAnagram(word1, word2);
