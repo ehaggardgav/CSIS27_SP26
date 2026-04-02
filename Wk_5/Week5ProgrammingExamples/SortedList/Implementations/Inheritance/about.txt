@@ -1,0 +1,6 @@
+Version 1: SortedList extends LList. See Segment 18.1. Inefficient. Note that we override toArray.
+
+Version 2: LinkedSortedList extends LinkedChainBase. See Segment 18.12. (Same as the solution to Project 1, Chapter 18.)
+
+Version 3: LinkedSortedList extends LinkedChainList, which extends LinkedChainBase. (Same as the solution to Project 2, Chapter 18.)
+
