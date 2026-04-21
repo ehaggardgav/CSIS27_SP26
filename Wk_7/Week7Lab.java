@@ -33,4 +33,42 @@ public class Week7Lab {
         rightChild = right;
     }
     }
-}
+
+    static class BinarySearchTree<T extends Comparable<? super T>> {
+    
+        private BinaryNode<T> root;
+
+        public void add (T newEntry) {
+            if (root == null) {
+                root = new BinaryNode<>(newEntry);
+            } else {
+                addEntry(root, newEntry);
+            }
+        }
+
+        private void addEntry(BinaryNode<T> currentNode, T newEntry) {
+            boolean done = false;
+
+            while (!done) {
+                int comparison = newEntry.compareTo(currentNode.getData());
+
+                if (comparison < 0) {
+                    if (currentNode.getLeftChild() !=null) {
+                        currentNode = currentNode.getLeftChild();
+                    } else {
+                        currentNode.setLeftChild(new BinaryNode<>(newEntry));
+                        done = true;
+                    }
+                } else {
+                    if (currentNode.getrightChild() !=null) {
+                        currentNode = currentNode.getrightChild();
+                    } else {
+                        currentNode.setrightChild(new BinaryNode<>(newEntry));
+                        done = true;
+                    }
+                }
+            }
+        }
+    }
+
+    }
