@@ -69,6 +69,36 @@ public class Week7Lab {
                 }
             }
         }
+
+        public void preorder(){
+            if (root == null) return;
+            
+            Stack<BinaryNode<T>> stack1 = new Stack<>();
+            Stack<BinaryNode<T>> stack2 = new Stack<>();
+
+            stack1.push(root);
+
+            while (!stack1.isEmpty()) {
+                BinaryNode<T> current = stack1.pop();
+                stack2.push(current);
+
+                if (current.getLeftChild() != null)
+                    stack1.push(current.getLeftChild());
+
+                if (current.getRightChild() != null)
+                    stack1.push(current.getRightChild());
+            }
+
+            while (!stack2.isEmpty()) {
+                System.out.print(stack2.pop().getData() + " ");
+            }
+
+            System.out.println();
+        }
     }
+
+    
+
+    
 
     }
