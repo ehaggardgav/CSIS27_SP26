@@ -4,8 +4,9 @@ import java.util.Stack;
 public class Week7Lab {
     
     static class BinaryNode<T> {
-    private BinaryNode<T> leftChild;  // Reference to left child
-    private BinaryNode<T> rightChild; // Reference to right child
+    private T data;
+    private BinaryNode<T> leftChild;  
+    private BinaryNode<T> rightChild; 
 
     public BinaryNode (T data) {
         this.data = data;
@@ -21,7 +22,7 @@ public class Week7Lab {
         return leftChild;
     }
 
-    public BinaryNode<T> getrightChild() {
+    public BinaryNode<T> getRightChild() {
         return rightChild;
     }
 
@@ -29,7 +30,7 @@ public class Week7Lab {
         leftChild = left;
     }
 
-    public void setrightChild (BinaryNode<T> right) {
+    public void setRightChild (BinaryNode<T> right) {
         rightChild = right;
     }
     }
