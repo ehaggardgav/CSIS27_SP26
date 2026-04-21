@@ -117,10 +117,32 @@ public class Week7Lab {
         }
     }
 
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+
+        System.out.println("Enter 15 integers:");
+
+        for (int i = 0; i < 15; i++) {
+            int value = input.nextInt();
+            bst.add(value);
+        }
+
+        System.out.print("Preorder (Iterative): ");
+        bst.preorderIterative();
+
+        System.out.print("Postorder (Iterative): ");
+        bst.postorderIterative();
+
+        input.close();
     }
+}
 
     
 
     
 
-    }
+    
+
+    
