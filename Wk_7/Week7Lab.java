@@ -70,9 +70,29 @@ public class Week7Lab {
             }
         }
 
-        public void preorder(){
+        public void preorderIterative() {
             if (root == null) return;
-            
+
+            Stack<BinaryNode<T>> stack = new Stack<>();
+            stack.push(root);
+
+            while (!stack.isEmpty()) {
+                BinaryNode<T> current = stack.pop();
+                System.out.print(current.getData() + " ");
+
+                if (current.getRightChild() != null)
+                    stack.push(current.getRightChild());
+
+                if (current.getLeftChild() != null)
+                    stack.push(current.getLeftChild());
+            }
+
+            System.out.println();
+        }
+
+        public void postorderIterative() {
+            if (root == null) return;
+
             Stack<BinaryNode<T>> stack1 = new Stack<>();
             Stack<BinaryNode<T>> stack2 = new Stack<>();
 
@@ -95,6 +115,8 @@ public class Week7Lab {
 
             System.out.println();
         }
+    }
+
     }
 
     
