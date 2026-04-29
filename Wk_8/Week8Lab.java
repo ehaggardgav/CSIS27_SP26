@@ -15,18 +15,16 @@ public class Week8Lab {
         System.out.println("Get key 99: " + map.get(99));
     }
 
-    // -----------------------------
+    
     // Interface
-    // -----------------------------
     interface MyMap {
         void put(int key, String value);
         String get(int key);
         void printTable();
     }
 
-    // -----------------------------
+    
     // Entry class
-    // -----------------------------
     static class Entry {
         int key;
         String value;
@@ -37,9 +35,7 @@ public class Week8Lab {
         }
     }
 
-    // -----------------------------
     // HashMap implementation
-    // -----------------------------
     static class LinearProbingHashMap implements MyMap {
 
         private Entry[] table;
