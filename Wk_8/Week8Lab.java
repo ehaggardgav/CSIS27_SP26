@@ -3,16 +3,24 @@ public class Week8Lab {
     public static void main(String[] args) {
         LinearProbingHashMap map = new LinearProbingHashMap();
 
-        map.put(10, "A");
-        map.put(16, "B");
-        map.put(22, "C");
-        map.put(28, "D");
-        map.put(34, "E");
+        // Test of random values
+        int[] keys = {13, 27, 35, 42, 58, 71, 86};
 
+        for (int k : keys) {
+            map.put(k, "V" + k);
+        }
+
+        // Print full table
         map.printTable();
 
-        System.out.println("\nGet key 16: " + map.get(16));
-        System.out.println("Get key 99: " + map.get(99));
+        // Test retrieval
+        System.out.println("\nTesting retrieval:");
+        for (int k : keys) {
+            System.out.println("Get " + k + ": " + map.get(k));
+        }
+
+        // Test a missing key
+        System.out.println("\nGet 999: " + map.get(999));
     }
 
     
