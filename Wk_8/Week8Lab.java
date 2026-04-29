@@ -64,7 +64,26 @@ public class Week8Lab {
         count ++;
     }
 
-    
+    @Override
+        public String get(int key) {
+            int index = hash(key);
+            int startIndex = index;
+
+            while (table[index] != null) {
+                if (table[index].key == key) {
+                    return table[index].value;
+                }
+
+                index = (index + 1) % size;
+
+                // Prevent infinite loop
+                if (index == startIndex) {
+                    break;
+                }
+            }
+
+            return null;
+        }
     
 
     
