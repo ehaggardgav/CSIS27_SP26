@@ -10,4 +10,12 @@ public class Week8Lab {
         }
         return h;
    } 
+
+   interface MyMap {
+        void put (int key, String value);
+        String get (int key);
+        void printTable();
+   }
+
+   
 }
