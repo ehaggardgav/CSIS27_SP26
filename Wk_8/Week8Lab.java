@@ -3,28 +3,26 @@ public class Week8Lab {
     public static void main(String[] args) {
         LinearProbingHashMap map = new LinearProbingHashMap();
 
-        // Test of random values
+        //Test of random values
         int[] keys = {13, 27, 35, 42, 58, 71, 86};
 
         for (int k : keys) {
             map.put(k, "V" + k);
         }
 
-        // Print full table
         map.printTable();
 
-        // Test retrieval
         System.out.println("\nTesting retrieval:");
         for (int k : keys) {
             System.out.println("Get " + k + ": " + map.get(k));
         }
 
-        // Test a missing key
+        //Test a missing key
         System.out.println("\nGet 999: " + map.get(999));
     }
 
     
-    // Interface
+    //Interface
     interface MyMap {
         void put(int key, String value);
         String get(int key);
@@ -32,7 +30,7 @@ public class Week8Lab {
     }
 
     
-    // Entry class
+    //Entry class
     static class Entry {
         int key;
         String value;
@@ -43,7 +41,7 @@ public class Week8Lab {
         }
     }
 
-    // HashMap implementation
+    //HashMap implementation
     static class LinearProbingHashMap implements MyMap {
 
         private Entry[] table;
