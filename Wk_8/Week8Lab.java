@@ -83,7 +83,25 @@ public class Week8Lab {
             }
 
             return null;
+    }
+
+    private void resize() {
+            System.out.println("Resizing from " + size + " to " + (size * 2));
+
+            Entry[] oldTable = table;
+
+            size = size * 2;
+            table = new Entry[size];
+            count = 0;
+
+            // Reinsert all entries
+            for (Entry entry : oldTable) {
+                if (entry != null) {
+                    put(entry.key, entry.value);
+                }
+            }
         }
+
     
 
     
