@@ -17,5 +17,15 @@ public class Week8Lab {
         void printTable();
    }
 
-   
+   static class Entry {
+        int key;
+        String value;
+
+        Entry(int key, String value)n {
+            this.key = key;
+            this.value = value;
+        }
+   }
+
+
 }
