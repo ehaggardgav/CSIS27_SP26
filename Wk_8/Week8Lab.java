@@ -83,7 +83,7 @@ public class Week8Lab {
             }
 
             return null;
-    }
+        }
 
     private void resize() {
             System.out.println("Resizing from " + size + " to " + (size * 2));
@@ -100,7 +100,23 @@ public class Week8Lab {
                     put(entry.key, entry.value);
                 }
             }
+    }
+
+    @Override
+        public void printTable() {
+            System.out.println("\nHash Table:");
+
+            for (int i = 0; i < size; i++) {
+                if (table[i] == null) {
+                    System.out.println(i + ": empty");
+                } else {
+                    System.out.println(i + ": (" + table[i].key + ", " + table[i].value + ")");
+                }
+            }
         }
+    }
+
+
 
     
 
