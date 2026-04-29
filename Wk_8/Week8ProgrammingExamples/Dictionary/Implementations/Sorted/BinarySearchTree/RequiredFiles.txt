@@ -1,0 +1,11 @@
+BstDictionary.javaDictionaryInterface.javaDriver.java
+The packages TreePackage and StackAndQueuePackage in the Tree folder:
+
+In TreePackage:
+
+BinaryNode.javaBinaryNodeInterface.javaBinarySearchTree.javaBinarySearchTreeI.javaBinaryTree.javaBinaryTreeInterface.javaSearchTreeInterface.javaTreeInterface.javaTreeIteratorInterface.java
+
+In StackAndQueuePackage:
+
+LinkedQueue.javaLinkedStack.javaQueueInterface.javaStackInterface.java
+

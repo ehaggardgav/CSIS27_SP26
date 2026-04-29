@@ -1,0 +1,8 @@
+For Version1:
+
+DictionaryInterface.javaDriver.javaHashedDictionary.java (Uses probe for add, remove, and getValue. Has an inner class Entry  like the one in Listing 21-1, but is protected instead of private.)Name.java (use the enclosed version since it contains hashCode.)For Version2:
+
+DictionaryInterface.javaDriver.javaHashedDictionary.java (Uses probe for add, but locate for remove and getValue.  
+Has the inner class TableEntry, whose objects record their own states and
+have methods to access the states.)Name.java (Use the enclosed version since it contains hashCode.)
+
