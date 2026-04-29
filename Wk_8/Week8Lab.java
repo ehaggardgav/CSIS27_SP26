@@ -1,6 +1,19 @@
 public class Week8Lab {
     public static void main(String[] args) {
+        LinearProbingHashMap map = new LinearProbingHashMap();
 
+        // Insert values (forces collisions + resize)
+        map.put(10, "A");
+        map.put(16, "B"); // collision with 10
+        map.put(22, "C"); // collision chain
+        map.put(28, "D"); // triggers resize
+        map.put(34, "E");
+
+        map.printTable();
+
+        // Test retrieval
+        System.out.println("\nGet key 16: " + map.get(16));
+        System.out.println("Get key 99: " + map.get(99));
     }
 
    public int hashCode() {
@@ -115,6 +128,7 @@ public class Week8Lab {
             }
         }
     }
+
 
 
 
