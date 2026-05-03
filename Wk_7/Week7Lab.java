@@ -61,10 +61,10 @@ public class Week7Lab {
                         done = true;
                     }
                 } else {
-                    if (currentNode.getrightChild() !=null) {
-                        currentNode = currentNode.getrightChild();
+                    if (currentNode.getRightChild() !=null) {
+                        currentNode = currentNode.getRightChild();
                     } else {
-                        currentNode.setrightChild(new BinaryNode<>(newEntry));
+                        currentNode.setRightChild(new BinaryNode<>(newEntry));
                         done = true;
                     }
                 }
