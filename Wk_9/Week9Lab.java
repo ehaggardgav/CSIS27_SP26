@@ -1,10 +1,38 @@
+import java.util.Random;
+
 public class Week9Lab {
     public static void main(String[] args) {
 
     }
 
-    public int minDepth(TreeNode root) {
+    public static int[] randomArray(int size) {
+        Random rand = new Random();
+        int[] arr = new int[size];
 
+        for (int i = 0; i < size; i++) {
+            arr[i] = rand.nextInt(100);
+        }
+        return arr;
+    }
+
+    public int minDepth(TreeNode root) {
+        if (root == null) return 0;
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        int depth = 1;
+
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+
+            for (int i = 0; i < size; i++) {
+                TreeNode current = queue.poll();
+                if (current.left == null && current.right == null) {
+                    return depth;
+                }
+            }
+        }
     }
 
     static class TreeNode {
@@ -22,4 +50,6 @@ public class Week9Lab {
             this.right = right;
         }
     }
+
+    
 }
