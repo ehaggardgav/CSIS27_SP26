@@ -6,7 +6,7 @@ public class Week9Lab {
         Week9Lab obj = new Week9Lab();
 
         int size = 1 + new Random().nextInt(10);
-        int[] arr = generateRandomArray(size);
+        int[] arr = randomArray(size);
 
         System.out.println("Random values:");
         for (int n : arr) System.out.print(n + " ");
