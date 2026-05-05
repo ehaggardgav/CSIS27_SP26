@@ -4,7 +4,22 @@ import java.util.Random;
 
 public class Week9Lab {
     public static void main(String[] args) {
+        Week9Lab obj = new Week9Lab();
 
+        int size = 1 + new Random().nextInt(10);
+        int[] arr = generateRandomArray(size);
+
+        System.out.println("Random values:");
+        for (int n : arr) System.out.print(n + " ");
+        System.out.println("\n");
+
+        TreeNode root = buildTree(arr);
+
+        System.out.println("Tree (level order):");
+        printTree(root);
+
+        int result = obj.minDepth(root);
+        System.out.println("\nMinimum Depth: " + result);
     }
 
     public static int[] randomArray(int size) {
@@ -44,7 +59,6 @@ public class Week9Lab {
 
         return depth;
     }
-
 
     static class TreeNode {
         int val;
