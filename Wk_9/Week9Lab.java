@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Random;
 
 public class Week9Lab {
@@ -23,17 +25,26 @@ public class Week9Lab {
 
         int depth = 1;
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int size = queue.size();
 
             for (int i = 0; i < size; i++) {
                 TreeNode current = queue.poll();
+
                 if (current.left == null && current.right == null) {
                     return depth;
                 }
+
+                if (current.left != null) queue.add(current.left);
+                if (current.right != null) queue.add(current.right);
             }
+
+            depth++;
         }
+
+        return depth;
     }
+
 
     static class TreeNode {
         int val;
