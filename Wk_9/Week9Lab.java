@@ -1,6 +1,5 @@
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Random;
+import java.util.*;
+
 
 public class Week9Lab {
     public static void main(String[] args) {
@@ -30,6 +29,32 @@ public class Week9Lab {
             arr[i] = rand.nextInt(100);
         }
         return arr;
+    }
+
+     public static TreeNode buildTree(int[] arr) {
+        if (arr.length == 0) return null;
+
+        TreeNode root = new TreeNode(arr[0]);
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        int i = 1;
+
+        while (i < arr.length) {
+            TreeNode current = queue.poll();
+
+            if (i < arr.length) {
+                current.left = new TreeNode(arr[i++]);
+                queue.add(current.left);
+            }
+
+            if (i < arr.length) {
+                current.right = new TreeNode(arr[i++]);
+                queue.add(current.right);
+            }
+        }
+
+        return root;
     }
 
     public int minDepth(TreeNode root) {
